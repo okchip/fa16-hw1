@@ -1,15 +1,20 @@
 def squared_sum(a, b)
-  # Q1 CODE HERE
+  return (a+b)**2
 
 end
 
 def sort_array_plus_one(a)
-  # Q2 CODE HERE
+  # have to reassign, cannot just do a.sort in place
+  a = a.sort
+  new_array = a.map{ |x| x + 1 }
+  # use map! if destructively modifying original array
+  return new_array
 
 end
 
 def combine_name(first_name, last_name)
-  # Q3 CODE HERE
+  return first_name << " " << last_name
+  # << is like + but it modifies the first element and is faster, which is p cool
 
 end
 
